@@ -1,0 +1,28 @@
+{
+  "name": "quark-desktop-monorepo",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Quark Downloader Pro desktop migration workspace",
+  "scripts": {
+    "dev": "npm --prefix frontend run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "lint": "npm --prefix frontend run lint",
+    "build": "npm --prefix frontend run build",
+    "tauri:dev": "npm --prefix frontend exec -- tauri dev",
+    "tauri:build": "npm --prefix frontend exec -- tauri build",
+    "tauri:build:win-x64": "npm --prefix frontend exec -- tauri build -- --target x86_64-pc-windows-msvc",
+    "tauri:build:win-arm64": "npm --prefix frontend exec -- tauri build -- --target aarch64-pc-windows-msvc",
+    "tauri:build:mac-x64": "npm --prefix frontend exec -- tauri build -- --target x86_64-apple-darwin",
+    "tauri:build:mac-arm64": "npm --prefix frontend exec -- tauri build -- --target aarch64-apple-darwin",
+    "tauri:build:mac-universal": "npm --prefix frontend exec -- tauri build -- --target universal-apple-darwin"
+  },
+  "keywords": [
+    "quark",
+    "desktop",
+    "tauri"
+  ],
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "license": "MIT"
+}
